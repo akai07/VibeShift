@@ -66,7 +66,7 @@ function App() {
     <ThemeProvider>
       <DataProvider>
         <NotificationProvider>
-          <Router>
+          <Router basename={process.env.NODE_ENV === 'production' ? '/VibeShift' : '/'}>
             <AppContainer>
               <Sidebar 
                 collapsed={sidebarCollapsed} 
